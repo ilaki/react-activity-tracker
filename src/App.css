@@ -1,0 +1,300 @@
+:root{
+    --highlight-normal : rgba(52, 58, 64,0.3); 
+    --bg-grey : rgba(108, 117, 125,0.8);
+    --bg-gradient : linear-gradient( rgba(62,81,81, 0.6) 0%, rgba(222,203,164, 0.6) 100%);
+}
+
+/* utilities */
+.clearfix,
+.clearfix::before,
+.clearfix::after {
+    content: "";    
+    display: block;
+    clear: both;
+}
+
+
+/* basic global styles*/
+* {
+    margin : 0;
+    padding:0;
+    box-sizing: border-box;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
+  /*-----------landing page aka user page styles ----------*/
+  .landing-page {
+    display : flex;
+    flex-direction: column;
+    min-height : 100vh;
+    max-width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-gradient);
+    background-color: var(--bg-grey);
+  }
+
+
+.users-list {
+    width: 80%;
+    margin: 50px;
+}
+
+.user {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin: 1px 4px;
+    min-width : 80vw;
+    background-color: #fff;
+    transition: background-color 0.2s ease ;
+}
+
+.user:hover {
+    background-color : rgba(52, 58, 64,0.3);
+    cursor: pointer;
+    color:#fff;
+}
+
+.user-item {
+    width: 33.33%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    border-right : 1px solid rgba(52, 58, 64,0.2);
+    padding : 10px;
+    font-size: 0.9rem;
+}
+
+
+/*-------------modal styles----------*/
+
+/*overlay styles - default/basic*/
+.ReactModal__Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient( rgba(62,81,81,0) 0%,rgba(222,203,164, 0) 100%);
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+  }
+
+.ReactModal__Overlay--after-open {
+opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+opacity: 0;
+transform: scale(0);
+}
+
+/*modal's own style*/
+.ReactModal__Content {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    border: 1px solid #ccc;
+    background: #fff;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 4px;
+    outline: none;
+    padding: 50px;
+}
+
+/*modal header styles*/
+.modal-header {
+    margin : 10px;
+}
+
+.modal-title {
+    display: inline;
+    font-size: 2rem;
+    font-weight: normal;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    text-align: left;
+    margin-right: 40px;
+}
+
+/*modal's content styles*/
+.modal-list {
+    margin : 40px 20px;
+    border : 2px solid rgba(52, 58, 64,0.5);
+    border-radius : 5px; 
+    padding: 10px;
+}
+
+.modal-list-item {
+    list-style-type: none;
+    position: relative;
+    font-size: 0.8rem;
+}
+
+/*date picker styles*/
+.modal-date-picker {
+    display: inline;
+    text-align: center;
+    border : 1px solid rgba(52, 58, 64,0.5);
+    border-radius : 5px;
+    padding : 10px 0px;
+    color: rgba(0,0,0,0.8); 
+    max-width: 100px;    
+}
+
+.react-datepicker__navigation:focus {
+    outline : none;
+    color: rgba(0,0,0,1);
+}
+
+.modal-date-picker:focus {
+    outline : none;
+}
+
+.modal-date-picker:hover {
+    cursor : pointer;
+}
+/*modal close button(font awesome icon) styles*/
+.modal-close-btn {
+    width : 20px;
+    height:20px;
+    position:absolute;
+    top:0;
+    right:0;
+    margin : 5px;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.modal-close-btn:hover{
+    cursor: pointer;
+}
+
+/*----------activity meter styles-------------*/
+.activity-meter {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    min-width: 150px;
+}
+
+.activity-time {
+    width: 20%;
+    min-width: 50px;
+    margin-right: 20px;
+    letter-spacing: 1.2;
+}
+
+.activity-duration {
+    background-color: var(--bg-grey);
+    color: #fff;
+    text-align: center;
+    width:80px;
+    border-radius: 5px;
+}
+
+.activity-bar {
+    height: 8px;
+    border-radius : 100px;
+    max-width: calc(60%);
+}
+
+/*loader aka spinner styles*/
+landing-page-loader {
+    color : var(--bg-grey);
+    display: inline-block;
+}
+
+
+
+/*---------animations and effects ---------*/
+
+/* activity meter flow animation */
+@-webkit-keyframes activity-meter {
+   0% { width: 0; }
+}
+@-moz-keyframes activity-meter {
+   0% { width: 0; }
+}
+@keyframes activity-meter {
+   0% { width: 0; }
+}
+
+.activity-meter > .activity-bar {
+    -webkit-animation: activity-meter 2s ease;
+  -moz-animation: activity-meter 2s ease;
+  animation: activity-meter 2s ease;
+}
+
+
+/**media queries **/
+
+@media only screen and (max-width : 600px) {
+    
+    /* user page mobile default styles*/
+    .user-id , .user-timezone {
+        display: none;
+    }
+    .user-name {
+        width: 100%;
+    }
+
+    /*modal styles*/
+    .ReactModal__Content {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0 !important;
+    }
+
+    .modal-header {
+        margin : 0;
+        padding: 10px;
+    }
+
+    .modal-date-picker {
+        padding: 0;
+    }
+
+    .modal-title {
+        font-size: 1.5rem;
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+        }
+    
+    .modal-list {
+        padding: 0;
+        margin: 40px;
+        border: none;;
+    }
+
+    .activity-meter {
+        width : 100%;
+    }
+
+    .activity-time{
+        max-width: 20%;
+    }
+}

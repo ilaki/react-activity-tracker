@@ -1,0 +1,160 @@
+{
+	"ok": true,
+	"members": [{
+			"id": "W012A3CDE",
+			"real_name": "Egon Spengler",
+			"tz": "America/Los_Angeles",
+			"activity_periods": [{
+					"start_time": "Feb 1 2020 1:33PM",
+					"end_time": "Feb 1 2020 1:54PM"
+				},
+				{
+					"start_time": "Mar 1 2020 11:11AM",
+					"end_time": "Mar 1 2020 2:00PM"
+				},
+				{
+					"start_time": "Mar 16 2020 5:33PM",
+					"end_time": "Mar 16 2020 8:02PM"
+				}
+			]
+		},
+		{
+			"id": "W07QCRPA4",
+			"real_name": "Glinda Southgood",
+			"tz": "Asia/Kolkata",
+			"activity_periods": [{
+					"start_time": "Feb 1 2020 1:33PM",
+					"end_time": "Feb 1 2020 1:54PM"
+				},
+				{
+					"start_time": "Mar 1 2020 11:11AM",
+					"end_time": "Mar 1 2020 2:00PM"
+				},
+				{
+					"start_time": "Mar 16 2020 5:33PM",
+					"end_time": "Mar 16 2020 8:02PM"
+				}
+			]
+		},
+		{
+			"id": "W07QCRPA9",
+			"real_name": "Deepak Sayeed",
+			"tz": "Asia/Kolkata",
+			"activity_periods": [
+			]
+		},
+		{
+			"id": "W07QCRPA4",
+			"real_name": "Ricci Braveman",
+			"tz": "Asia/Moscow",
+			"activity_periods": [{
+					"start_time": "Jul 1 2020 1:33PM",
+					"end_time": "Jul 2 2020 1:54AM"
+				},
+				{
+					"start_time": "Jul 20 2020 1:33AM",
+					"end_time": "Jul 20 2020 7:54AM"
+				},
+				{
+					"start_time": "Aug 1 2020 11:11AM",
+					"end_time": "Aug 1 2020 2:00PM"
+				},
+				{
+					"start_time": "Aug 1 2020 5:33PM",
+					"end_time": "Aug 1 2020 8:02PM"
+				}
+			]
+		},
+		{
+			"id": "W07QCRPA01",
+			"real_name": "Ilaki Yen",
+			"tz": "Asia/Moscow",
+			"activity_periods": [{
+					"start_time": "Jul 1 2020 1:33PM",
+					"end_time": "Jul 2 2020 1:54AM"
+				},
+				{
+					"start_time": "Jul 20 2020 1:33AM",
+					"end_time": "Jul 20 2020 7:54AM"
+				},
+				{
+					"start_time": "Aug 1 2020 11:11AM",
+					"end_time": "Aug 1 2020 2:00PM"
+				},
+				{
+					"start_time": "Aug 1 2020 5:33PM",
+					"end_time": "Aug 1 2020 8:02PM"
+				}
+			]
+		},
+		{
+			"id": "W07QCRP11",
+			"real_name": "Steve Aoki",
+			"tz": "Asia/Moscow",
+			"activity_periods": [{
+					"start_time": "Mar 10 2020 10:33PM",
+					"end_time": "Mar 11 2020 1:54AM"
+				},
+				{
+					"start_time": "June 20 2020 9:33AM",
+					"end_time": "June 20 2020 11:54AM"
+				},
+				{
+					"start_time": "Aug 1 2020 11:11AM",
+					"end_time": "Aug 1 2020 2:00PM"
+				},
+				{
+					"start_time": "Aug 1 2020 5:33PM",
+					"end_time": "Aug 1 2020 8:02PM"
+				}
+			]
+		},
+		{
+			"id": "W07QCQQA4",
+			"real_name": "Chester Bennington",
+			"tz": "Asia/Moscow",
+			"activity_periods": [{
+					"start_time": "Jul 1 2020 1:33PM",
+					"end_time": "Jul 2 2020 1:54AM"
+				},
+				{
+					"start_time": "Jul 20 2020 1:33AM",
+					"end_time": "Jul 20 2020 7:54AM"
+				},
+				{
+					"start_time": "Aug 1 2020 11:11AM",
+					"end_time": "Aug 1 2020 2:00PM"
+				},
+				{
+					"start_time": "Aug 1 2020 5:33PM",
+					"end_time": "Aug 1 2020 8:02PM"
+				}
+			]
+		},
+		{
+			"id": "W07QCTYA4",
+			"real_name": "Zaheer Hussein",
+			"tz": "Asia/Kolkata",
+			"activity_periods": [{
+					"start_time": "Dec 1 2019 1:11PM",
+					"end_time": "Dec 1 2019 2:12PM"
+				}
+			]
+		},
+		{
+			"id": "W07QRRPA4",
+			"real_name": "Jason Walker",
+			"tz": "Asia/Kolkata",
+			"activity_periods": [{
+					"start_time": "Aug 2 2020 12:00PM",
+					"end_time": "Aug 2 2020 1:54PM"
+				},
+				{
+					"start_time": "Aug 2 2020 11:11AM",
+					"end_time": "Aug 2 2020 11:50AM"
+				}
+			]
+		}
+		
+	]
+}
