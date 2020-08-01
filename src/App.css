@@ -1,14 +1,14 @@
-:root{
-    --highlight-normal : rgba(52, 58, 64,0.3); 
-    --bg-grey : rgba(108, 117, 125,0.8);
-    --bg-gradient : linear-gradient( rgba(62,81,81, 0.6) 0%, rgba(222,203,164, 0.6) 100%);
+:root {
+    --highlight-normal: rgba(52, 58, 64, 0.3);
+    --bg-grey: rgba(108, 117, 125, 0.8);
+    --bg-gradient: linear-gradient(rgba(62, 81, 81, 0.6) 0%, rgba(222, 203, 164, 0.6) 100%);
 }
 
 /* utilities */
 .clearfix,
 .clearfix::before,
 .clearfix::after {
-    content: "";    
+    content: "";
     display: block;
     clear: both;
 }
@@ -16,8 +16,8 @@
 
 /* basic global styles*/
 * {
-    margin : 0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font: inherit;
     vertical-align: baseline;
@@ -26,28 +26,28 @@
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
+}
 
-  /*-----------landing page aka user page styles ----------*/
-  .landing-page {
-    display : flex;
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+/*-----------landing page aka user page styles ----------*/
+.landing-page {
+    display: flex;
     flex-direction: column;
-    min-height : 100vh;
+    min-height: 100vh;
     max-width: 100vw;
     justify-content: center;
     align-items: center;
     background: var(--bg-gradient);
     background-color: var(--bg-grey);
-  }
+}
 
 
 .users-list {
@@ -60,15 +60,15 @@ body {
     flex-wrap: nowrap;
     justify-content: space-around;
     margin: 1px 4px;
-    min-width : 80vw;
+    min-width: 80vw;
     background-color: #fff;
-    transition: background-color 0.2s ease ;
+    transition: background-color 0.2s ease;
 }
 
 .user:hover {
-    background-color : rgba(52, 58, 64,0.3);
+    background-color: rgba(52, 58, 64, 0.3);
     cursor: pointer;
-    color:#fff;
+    color: #fff;
 }
 
 .user-item {
@@ -76,8 +76,8 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: center;
-    border-right : 1px solid rgba(52, 58, 64,0.2);
-    padding : 10px;
+    border-right: 1px solid rgba(52, 58, 64, 0.2);
+    padding: 10px;
     font-size: 0.9rem;
 }
 
@@ -91,18 +91,18 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient( rgba(62,81,81,0) 0%,rgba(222,203,164, 0) 100%);
+    background: linear-gradient(rgba(62, 81, 81, 0) 0%, rgba(222, 203, 164, 0) 100%);
     opacity: 0;
     transition: all 500ms ease-in-out;
-  }
+}
 
 .ReactModal__Overlay--after-open {
-opacity: 1;
+    opacity: 1;
 }
 
 .ReactModal__Overlay--before-close {
-opacity: 0;
-transform: scale(0);
+    opacity: 0;
+    transform: scale(0);
 }
 
 /*modal's own style*/
@@ -123,7 +123,7 @@ transform: scale(0);
 
 /*modal header styles*/
 .modal-header {
-    margin : 10px;
+    margin: 10px;
 }
 
 .modal-title {
@@ -139,9 +139,9 @@ transform: scale(0);
 
 /*modal's content styles*/
 .modal-list {
-    margin : 40px 20px;
-    border : 2px solid rgba(52, 58, 64,0.5);
-    border-radius : 5px; 
+    margin: 40px 20px;
+    border: 2px solid rgba(52, 58, 64, 0.5);
+    border-radius: 5px;
     padding: 10px;
 }
 
@@ -155,38 +155,39 @@ transform: scale(0);
 .modal-date-picker {
     display: inline;
     text-align: center;
-    border : 1px solid rgba(52, 58, 64,0.5);
-    border-radius : 5px;
-    padding : 10px 0px;
-    color: rgba(0,0,0,0.8); 
-    max-width: 100px;    
+    border: 1px solid rgba(52, 58, 64, 0.5);
+    border-radius: 5px;
+    padding: 10px 0px;
+    color: rgba(0, 0, 0, 0.8);
+    max-width: 100px;
 }
 
 .react-datepicker__navigation:focus {
-    outline : none;
-    color: rgba(0,0,0,1);
+    outline: none;
+    color: rgba(0, 0, 0, 1);
 }
 
 .modal-date-picker:focus {
-    outline : none;
+    outline: none;
 }
 
 .modal-date-picker:hover {
-    cursor : pointer;
+    cursor: pointer;
 }
+
 /*modal close button(font awesome icon) styles*/
 .modal-close-btn {
-    width : 20px;
-    height:20px;
-    position:absolute;
-    top:0;
-    right:0;
-    margin : 5px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px;
     background-color: transparent;
     border-radius: 5px;
 }
 
-.modal-close-btn:hover{
+.modal-close-btn:hover {
     cursor: pointer;
 }
 
@@ -209,19 +210,19 @@ transform: scale(0);
     background-color: var(--bg-grey);
     color: #fff;
     text-align: center;
-    width:80px;
+    width: 80px;
     border-radius: 5px;
 }
 
 .activity-bar {
     height: 8px;
-    border-radius : 100px;
+    border-radius: 100px;
     max-width: calc(60%);
 }
 
 /*loader aka spinner styles*/
 landing-page-loader {
-    color : var(--bg-grey);
+    color: var(--bg-grey);
     display: inline-block;
 }
 
@@ -231,30 +232,40 @@ landing-page-loader {
 
 /* activity meter flow animation */
 @-webkit-keyframes activity-meter {
-   0% { width: 0; }
-}
-@-moz-keyframes activity-meter {
-   0% { width: 0; }
-}
-@keyframes activity-meter {
-   0% { width: 0; }
+    0% {
+        width: 0;
+    }
 }
 
-.activity-meter > .activity-bar {
+@-moz-keyframes activity-meter {
+    0% {
+        width: 0;
+    }
+}
+
+@keyframes activity-meter {
+    0% {
+        width: 0;
+    }
+}
+
+.activity-meter>.activity-bar {
     -webkit-animation: activity-meter 2s ease;
-  -moz-animation: activity-meter 2s ease;
-  animation: activity-meter 2s ease;
+    -moz-animation: activity-meter 2s ease;
+    animation: activity-meter 2s ease;
 }
 
 
 /**media queries **/
 
 @media only screen and (max-width : 600px) {
-    
+
     /* user page mobile default styles*/
-    .user-id , .user-timezone {
+    .user-id,
+    .user-timezone {
         display: none;
     }
+
     .user-name {
         width: 100%;
     }
@@ -269,7 +280,7 @@ landing-page-loader {
     }
 
     .modal-header {
-        margin : 0;
+        margin: 0;
         padding: 10px;
     }
 
@@ -282,19 +293,20 @@ landing-page-loader {
         width: 100%;
         display: block;
         margin-bottom: 10px;
-        }
-    
+    }
+
     .modal-list {
         padding: 0;
         margin: 40px;
-        border: none;;
+        border: none;
+        ;
     }
 
     .activity-meter {
-        width : 100%;
+        width: 100%;
     }
 
-    .activity-time{
+    .activity-time {
         max-width: 20%;
     }
 }
