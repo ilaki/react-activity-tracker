@@ -1,4 +1,5 @@
-//Components main function is to control opening Modal and deciding what to show based on user choice
+
+//Component controls opening Modal and sending particular user data based on user choice
 
 import React, { useState, useEffect } from "react";
 import User from "./user";
@@ -6,10 +7,9 @@ import ActivitiesModal from "../activities/activities.modal";
 import data from "../../data/activities.json"; // sample user data
 import moment from "moment";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import Loader from 'react-loader-spinner';
+import Loader from "react-loader-spinner";
 
 const UsersList = () => {
-
   /**states setting 1.userlist if delimited by calender
                   2.current user who got clicked
                   3.current users activity
@@ -20,15 +20,14 @@ const UsersList = () => {
   const [currentUser, setCurrentUser] = useState("");
   const [currentUserActivities, setCurrentUserActivities] = useState([]);
   const [openActivityModal, setOpenActivityModal] = useState(false);
-  const[ isLoading , setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
-  
   useEffect(() => {
     // initially load users once , faking async user loading with timeout
-    setTimeout(()=> {
+    setTimeout(() => {
       setUsers([...data.members]);
       setIsLoading(false);
-    } , 1000)
+    }, 1000);
   }, []);
 
   //func to open up the activities of the user who has been clicked
@@ -41,19 +40,19 @@ const UsersList = () => {
     setOpenActivityModal(true);
   };
 
-  const closeActivityModal = () => {
-    //includes closing modal as well as oter func.
+  //includes closing modal as well as oter func.
+  const userActivityClosed = () => {
     setOpenActivityModal(false);
-    console.log("...modal closing in userlist");
   };
 
-  //funtion to change the date string provided to correct format (only applies to the current given JSON format) 
+  //funtion to change the date string provided to correct format (only applies to the current given JSON format)
   const formatActivity = (activityPeriods) => {
-    console.log("formattteteeeee");
     const activityPeriodsFormatted = activityPeriods.map((activityPeriod) => {
       let startTimePeriod = activityPeriod.start_time;
       let endTimePeriod = activityPeriod.end_time;
-      let [startMonth, startDate, startYear, startTime] = startTimePeriod.split(" ");
+      let [startMonth, startDate, startYear, startTime] = startTimePeriod.split(
+        " "
+      );
       let [endMonth, endDate, endYear, endTime] = endTimePeriod.split(" ");
       let startTimeIn24HrsFormat = moment(startTime, "hh:mmA").format("HH mm");
       let [startHour, startMinute] = startTimeIn24HrsFormat.split(" ");
@@ -89,13 +88,16 @@ const UsersList = () => {
   return (
     <div className="landing-page">
       {isLoading ? (
-          <Loader
-            className="landing-page-loader"
-            type="grid"
-            color='rgba(54,56,59,0.2)'
-            height={50}
-            width={50}/>)
-             : (
+        <Loader
+          /* loading spinner settings*/
+
+          className="landing-page-loader"
+          type="grid"
+          color="rgba(54,56,59,0.2)"
+          height={50}
+          width={50}
+        />
+      ) : (
         <div className="users-list">
           {users.map((user) => (
             <User
@@ -106,12 +108,16 @@ const UsersList = () => {
               {user.real_name}
             </User>
           ))}
-          <ActivitiesModal
-            currentUser={currentUser}
-            activities={currentUserActivities}
-            openModal={openActivityModal}
-            closeModal={closeActivityModal}
-          />
+          {openActivityModal ? (
+            <ActivitiesModal
+              currentUser={currentUser}
+              activities={currentUserActivities}
+              openModal={openActivityModal}
+              userActivityClosed={userActivityClosed}
+            />
+          ) : (
+            <div></div>
+          )}
           ;
         </div>
       )}

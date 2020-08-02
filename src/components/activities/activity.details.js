@@ -9,7 +9,6 @@ const ActivityDetails = ({activity}) => {
     let barWidth = ((parseInt(duration)/maxDuration)*100);
 
     // different colors are chosen for different duration of the activity 
-
     const colors = ["red","orange","purple","blue","cyan","yellow","#DAA520"];
    
     //checking if barwidth exceeds the availabe space and hence restricting it to 100
@@ -26,9 +25,9 @@ const ActivityDetails = ({activity}) => {
     //setting limit for lengthy bars
     let barWidthPercentage = (barWidth > 10)? `${barWidth - 10}%` : `${barWidth}%`;
     const styles = {
-        width : barWidthPercentage,
-        background : color
-    }
+      width: barWidthPercentage,
+      background: color,
+    };
 
     return (
         <>
@@ -43,3 +42,4 @@ const ActivityDetails = ({activity}) => {
 }
 
 export default ActivityDetails;
+
