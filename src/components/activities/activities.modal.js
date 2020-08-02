@@ -78,6 +78,7 @@ function ActivitiesModal({
     userActivityClosed();
   };
 
+  
   return (
     <Modal
       closeTimeoutMS={500}

@@ -15,11 +15,23 @@
 				{
 					"start_time": "Mar 16 2020 5:33PM",
 					"end_time": "Mar 16 2020 8:02PM"
+				},
+				{
+					"start_time": "Aug 2 2020 10:11AM",
+					"end_time": "Aug 2 2020 2:50PM"
+				},
+				{
+					"start_time": "Aug 3 2020 10:11AM",
+					"end_time": "Aug 3 2020 12:50PM"
+				},
+				{
+					"start_time": "Aug 3 2020 11:11PM",
+					"end_time": "Aug 4 2020 2:50AM"
 				}
 			]
 		},
 		{
-			"id": "W07QCRPA4",
+			"id": "W07QERPA4",
 			"real_name": "Glinda Southgood",
 			"tz": "Asia/Kolkata",
 			"activity_periods": [{
@@ -33,6 +45,26 @@
 				{
 					"start_time": "Mar 16 2020 5:33PM",
 					"end_time": "Mar 16 2020 8:02PM"
+				},
+				{
+					"start_time": "Aug 2 2020 10:11AM",
+					"end_time": "Aug 2 2020 2:50AM"
+				},
+				{
+					"start_time": "Aug 3 2020 11:00AM",
+					"end_time": "Aug 3 2020 11:50AM"
+				},
+				{
+					"start_time": "Aug 3 2020 11:51AM",
+					"end_time": "Aug 3 2020 2:50PM"
+				},
+				{
+					"start_time": "Aug 3 2020 6:11PM",
+					"end_time": "Aug 3 2020 8:50PM"
+				},
+				{
+					"start_time": "Aug 3 2020 10:11PM",
+					"end_time": "Aug 4 2020 1:50AM"
 				}
 			]
 		},
@@ -44,7 +76,7 @@
 			]
 		},
 		{
-			"id": "W07QCRPA4",
+			"id": "W07QCPPA4",
 			"real_name": "Ricci Braveman",
 			"tz": "Asia/Moscow",
 			"activity_periods": [{
@@ -62,11 +94,23 @@
 				{
 					"start_time": "Aug 1 2020 5:33PM",
 					"end_time": "Aug 1 2020 8:02PM"
+				},
+				{
+					"start_time": "Aug 2 2020 11:11AM",
+					"end_time": "Aug 2 2020 1:50PM"
+				},
+				{
+					"start_time": "Aug 3 2020 10:11AM",
+					"end_time": "Aug 3 2020 3:50PM"
+				},
+				{
+					"start_time": "Aug 3 2020 10:11PM",
+					"end_time": "Aug 4 2020 4:50AM"
 				}
 			]
 		},
 		{
-			"id": "W07QCRPA01",
+			"id": "W07QCRPA1",
 			"real_name": "Ilaki Yen",
 			"tz": "Asia/Moscow",
 			"activity_periods": [{
@@ -84,6 +128,18 @@
 				{
 					"start_time": "Aug 1 2020 5:33PM",
 					"end_time": "Aug 1 2020 8:02PM"
+				},
+				{
+					"start_time": "Aug 2 2020 10:11AM",
+					"end_time": "Aug 2 2020 2:50PM"
+				},
+				{
+					"start_time": "Aug 3 2020 11:11AM",
+					"end_time": "Aug 3 2020 12:50PM"
+				},
+				{
+					"start_time": "Aug 3 2020 10:11PM",
+					"end_time": "Aug 4 2020 2:50AM"
 				}
 			]
 		},
@@ -106,6 +162,14 @@
 				{
 					"start_time": "Aug 1 2020 5:33PM",
 					"end_time": "Aug 1 2020 8:02PM"
+				},
+				{
+					"start_time": "Aug 3 2020 10:11AM",
+					"end_time": "Aug 3 2020 2:50PM"
+				},
+				{
+					"start_time": "Aug 3 2020 4:11PM",
+					"end_time": "Aug 3 2020 6:50PM"
 				}
 			]
 		},
@@ -128,6 +192,30 @@
 				{
 					"start_time": "Aug 1 2020 5:33PM",
 					"end_time": "Aug 1 2020 8:02PM"
+				},
+				{
+					"start_time": "Aug 2 2020 10:00AM",
+					"end_time": "Aug 2 2020 1:54PM"
+				},
+				{
+					"start_time": "Aug 2 2020 3:00PM",
+					"end_time": "Aug 2 2020 7:54PM"
+				},
+				{
+					"start_time": "Aug 2 2020 11:11PM",
+					"end_time": "Aug 3 2020 1:50AM"
+				},
+				{
+					"start_time": "Aug 3 2020 10:11AM",
+					"end_time": "Aug 3 2020 2:50PM"
+				},
+				{
+					"start_time": "Aug 3 2020 5:11PM",
+					"end_time": "Aug 3 2020 8:50PM"
+				},
+				{
+					"start_time": "Aug 3 2020 9:11PM",
+					"end_time": "Aug 3 2020 11:50PM"
 				}
 			]
 		},
@@ -138,6 +226,22 @@
 			"activity_periods": [{
 					"start_time": "Dec 1 2019 1:11PM",
 					"end_time": "Dec 1 2019 2:12PM"
+				},
+				{
+					"start_time": "Aug 2 2020 12:00PM",
+					"end_time": "Aug 2 2020 3:54PM"
+				},
+				{
+					"start_time": "Aug 2 2020 6:00PM",
+					"end_time": "Aug 2 2020 7:54PM"
+				},
+				{
+					"start_time": "Aug 2 2020 11:11PM",
+					"end_time": "Aug 3 2020 1:50AM"
+				},
+				{
+					"start_time": "Aug 3 2020 11:11AM",
+					"end_time": "Aug 3 2020 11:50AM"
 				}
 			]
 		},

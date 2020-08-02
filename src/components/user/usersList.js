@@ -1,6 +1,4 @@
-
 //Component controls opening Modal and sending particular user data based on user choice
-
 import React, { useState, useEffect } from "react";
 import User from "./user";
 import ActivitiesModal from "../activities/activities.modal";
@@ -40,7 +38,7 @@ const UsersList = () => {
     setOpenActivityModal(true);
   };
 
-  //includes closing modal as well as oter func.
+  //includes closing modal as well as other func.
   const userActivityClosed = () => {
     setOpenActivityModal(false);
   };
@@ -88,9 +86,8 @@ const UsersList = () => {
   return (
     <div className="landing-page">
       {isLoading ? (
+        /*loading spinner component*/
         <Loader
-          /* loading spinner settings*/
-
           className="landing-page-loader"
           type="grid"
           color="rgba(54,56,59,0.2)"
@@ -101,6 +98,7 @@ const UsersList = () => {
         <div className="users-list">
           {users.map((user) => (
             <User
+              key={user.id}
               userId={user.id}
               userTimeZone={user.tz}
               openActivities={openActivities}
@@ -118,7 +116,7 @@ const UsersList = () => {
           ) : (
             <div></div>
           )}
-          ;
+          
         </div>
       )}
     </div>
