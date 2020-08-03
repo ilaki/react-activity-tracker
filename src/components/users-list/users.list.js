@@ -1,11 +1,13 @@
 //Component controls opening Modal and sending particular user data based on user choice
 import React, { useState, useEffect } from "react";
-import User from "./user";
+import User from "../user/user";
 import ActivitiesModal from "../activities/activities.modal";
 import data from "../../data/activities.json"; // sample user data
 import moment from "moment";
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from "react-loader-spinner";
+
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import "./users.list.css";
 
 const UsersList = () => {
   /**states setting 1.userlist if delimited by calender
@@ -13,12 +15,20 @@ const UsersList = () => {
                   3.current users activity
                   4.flag to open the modal
                   5.loading spinner for initial loading 
+                  6.sliding of title effect on scroll
   **/
   const [users, setUsers] = useState([]);
-  const [currentUser, setCurrentUser] = useState("");
+  const [currentUser, setCurrentUser] = useState({username : '' , id : '', tz : ''});
   const [currentUserActivities, setCurrentUserActivities] = useState([]);
   const [openActivityModal, setOpenActivityModal] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [translateTitle, setTranslateTitle] = useState("translateY(0px)")
+
+  const listenScrollEvent = () => {
+      window.scrollY > 35
+        ? setTranslateTitle("translateY(-200px)")
+        : setTranslateTitle("translateY(0px)")
+    }
 
   useEffect(() => {
     // initially load users once , faking async user loading with timeout
@@ -26,12 +36,19 @@ const UsersList = () => {
       setUsers([...data.members]);
       setIsLoading(false);
     }, 1000);
+
+    window.addEventListener("scroll", listenScrollEvent);
+
+    return ()=> {
+      window.removeEventListener("scroll",listenScrollEvent);
+    }
+
   }, []);
 
   //func to open up the activities of the user who has been clicked
-  const openActivities = (currentUser) => {
-    setCurrentUser(currentUser);
-    const userData = users.filter((user) => user["real_name"] === currentUser);
+  const openActivities = (username,id,tz) => {
+    setCurrentUser({username,id,tz});
+    const userData = users.filter((user) => user["id"] === id);
     let activityPeriods = [...userData[0].activity_periods];
     let formattedActivity = formatActivity(activityPeriods);
     setCurrentUserActivities(formattedActivity);
@@ -83,28 +100,29 @@ const UsersList = () => {
 
     return activityPeriodsFormatted;
   };
+
   return (
     <div className="landing-page">
       {isLoading ? (
         /*loading spinner component*/
         <Loader
-          className="landing-page-loader"
           type="grid"
           color="rgba(54,56,59,0.2)"
           height={50}
           width={50}
         />
       ) : (
+        <>
+        <h1 style = {{transform : translateTitle}} className = "landing-title">Activity Tracker</h1>
         <div className="users-list">
-          {users.map((user) => (
-            <User
-              key={user.id}
+          {users.map((user,index) => (
+            <User 
+              key={user.id+index}
               userId={user.id}
+              username={user["real_name"]}
               userTimeZone={user.tz}
               openActivities={openActivities}
-            >
-              {user.real_name}
-            </User>
+            />
           ))}
           {openActivityModal ? (
             <ActivitiesModal
@@ -118,6 +136,7 @@ const UsersList = () => {
           )}
           
         </div>
+        </>
       )}
     </div>
   );

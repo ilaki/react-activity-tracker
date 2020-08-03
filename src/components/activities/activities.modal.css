@@ -1,0 +1,154 @@
+/*-------------modal styles----------*/
+/*overlay styles*/
+.ReactModal__Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(62, 81, 81, 0) 0%, rgba(222, 203, 164, 0) 100%);
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+    opacity: 0;
+    transform: scale(0);
+}
+
+/*modal's structural style*/
+.ReactModal__Content {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    border: 1px solid #ccc;
+    background: #fff;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 4px;
+    outline: none;
+    padding: 50px;
+}
+
+/*modal header styles*/
+.modal-header {
+    margin: 10px;
+}
+
+.modal-title {
+    display: inline;
+    font-size: 2rem;
+    font-weight: normal;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    text-align: left;
+    margin-right: 40px;
+}
+
+.modal-userdetails {
+    margin-top: 10px;
+}
+
+.modal-userid, .modal-userzone {
+    font-size: 0.9rem;
+    padding: 0 10px;
+}
+
+/*modal's content styles*/
+.modal-list {
+    margin: 40px 20px;
+    border: 2px solid rgba(52, 58, 64, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.modal-list-item {
+    list-style-type: none;
+    position: relative;
+    font-size: 0.8rem;
+}
+
+/*date picker styles*/
+.modal-date-picker {
+    display: inline;
+    text-align: center;
+    border: 1px solid rgba(52, 58, 64, 0.5);
+    border-radius: 5px;
+    padding: 10px 0px;
+    color: rgba(0, 0, 0, 0.8);
+    max-width: 100px;
+}
+
+.react-datepicker__navigation:focus {
+    outline: none;
+    color: rgba(0, 0, 0, 1);
+}
+
+.modal-date-picker:focus {
+    outline: none;
+}
+
+.modal-date-picker:hover {
+    cursor: pointer;
+}
+
+/*modal close button(font awesome icon) styles*/
+.modal-close-btn {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.modal-close-btn:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+}
+
+
+/*-----media queries-----*/
+
+@media only screen and (max-width : 600px) {
+
+    /*modal styles*/
+    .ReactModal__Content {
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        padding: 0 !important;
+    }
+
+    .modal-header {
+        /* margin: 0; */
+        padding: 10px;
+    }
+
+    .modal-date-picker {
+        padding: 0;
+    }
+
+    .modal-title {
+        font-size: 1.5rem;
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .modal-list {
+        padding: 0;
+        margin: 40px;
+        border: none; 
+    }
+}

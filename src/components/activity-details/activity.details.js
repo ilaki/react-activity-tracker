@@ -1,5 +1,6 @@
 ///component that fill the activity card/modal of a particular user
 import React from 'react';
+import "./activity.details.css";
 
 const ActivityDetails = ({activity}) => {
 

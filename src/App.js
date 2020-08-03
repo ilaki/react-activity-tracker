@@ -1,7 +1,6 @@
 import React from 'react';
-import "./App.css";
 
-import UsersList from './components/user/usersList';
+import UsersList from './components/users-list/users.list';
 
 function App() {
   return (

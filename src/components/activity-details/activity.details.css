@@ -1,0 +1,67 @@
+/*----------activity meter styles-------------*/
+.activity-meter {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    min-width: 150px;
+}
+
+.activity-time {
+    width: 20%;
+    min-width: 50px;
+    margin-right: 20px;
+    letter-spacing: 1.2;
+}
+
+.activity-duration {
+    background-color: var(--bg-grey);
+    color: #fff;
+    text-align: center;
+    width: 80px;
+    border-radius: 5px;
+}
+
+.activity-bar {
+    height: 8px;
+    border-radius: 100px;
+    max-width: calc(60%);
+}
+
+
+/* activity meter flow animation */
+@-webkit-keyframes activity-meter {
+    0% {
+        width: 0;
+    }
+}
+
+@-moz-keyframes activity-meter {
+    0% {
+        width: 0;
+    }
+}
+
+@keyframes activity-meter {
+    0% {
+        width: 0;
+    }
+}
+
+.activity-meter>.activity-bar {
+    -webkit-animation: activity-meter 2s ease;
+    -moz-animation: activity-meter 2s ease;
+    animation: activity-meter 2s ease;
+}
+
+
+/*------media queries-------*/
+@media only screen and (max-width : 600px) {
+
+    .activity-meter {
+        width: 100%;
+    }
+
+    .activity-time {
+        max-width: 20%;
+    }
+}

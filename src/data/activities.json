@@ -244,21 +244,6 @@
 					"end_time": "Aug 3 2020 11:50AM"
 				}
 			]
-		},
-		{
-			"id": "W07QRRPA4",
-			"real_name": "Jason Walker",
-			"tz": "Asia/Kolkata",
-			"activity_periods": [{
-					"start_time": "Aug 2 2020 12:00PM",
-					"end_time": "Aug 2 2020 1:54PM"
-				},
-				{
-					"start_time": "Aug 2 2020 11:11AM",
-					"end_time": "Aug 2 2020 11:50AM"
-				}
-			]
 		}
-		
 	]
 }

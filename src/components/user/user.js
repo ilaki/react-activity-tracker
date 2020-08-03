@@ -1,13 +1,13 @@
 import React from "react";
+import "./user.css";
 
-const User = (props) => {
-  const currentUser = props.children;
+const User = ({username,userId,userTimeZone,openActivities}) => {
 
   return (
-    <div className="user" onClick={() => props.openActivities(currentUser)}>
-      <div className="user-item user-id"> {props.userId}</div>
-      <div className="user-item user-name">{currentUser}</div>
-      <div className="user-item user-timezone">{props.userTimeZone}</div>
+    <div className="user" onClick={() => openActivities(username,userId,userTimeZone)}>
+      <div className="user-item user-id"> {userId}</div>
+      <div className="user-item user-name">{username}</div>
+      <div className="user-item user-timezone">{userTimeZone}</div>
     </div>
   );
 };

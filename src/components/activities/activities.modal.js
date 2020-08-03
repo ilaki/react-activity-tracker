@@ -4,12 +4,13 @@
 import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
 import DatePicker from "react-datepicker";
-import ActivityDetails from "./activity.details";
+import ActivityDetails from "../activity-details/activity.details";
 
 import { FaWindowClose } from "react-icons/fa";
 
 //datepicker npm package for calender widget
 import "react-datepicker/dist/react-datepicker.css";
+import "./activities.modal.css";
 
 //modal component to display activities of a particular user on clicking them
 function ActivitiesModal({
@@ -18,8 +19,7 @@ function ActivitiesModal({
   openModal = false,
   userActivityClosed,
 }) {
-  Modal.setAppElement("body"); //this is set to avoid premature loading of modal script before DOM render,
-  // can be set to app as well if need be
+  Modal.setAppElement("body"); 
 
   //states to hold modal openstate , loading state and query activities by date
   const [dateTime, setDateTime] = useState(new Date());
@@ -77,26 +77,32 @@ function ActivitiesModal({
   const handleModalClose = () => {
     userActivityClosed();
   };
-
   
   return (
     <Modal
       closeTimeoutMS={500}
       isOpen={modalIsOpen}
-      onRequestClose={handleModalClose}
+      onRequestClose={()=>setModalIsOpen(false)}
+      onAfterClose={handleModalClose}
       shouldFocusAfterRender={true}
       shouldCloseOnOverlayClick={true}
       shouldCloseOnEsc={true}
       portalClassName="portal-root"
     >
       <div className="modal-header">
-        <h1 className="modal-title">{currentUser}</h1>
+        <h2 className="modal-title">{currentUser["username"]}</h2>
 
         <DatePicker
           className="modal-date-picker"
           selected={dateTime}
           onChange={onChangeDate}
         ></DatePicker>
+        
+        <div className = "modal-userdetails">
+        <code className = "modal-userid">{currentUser["id"]}</code>
+        <code className = "modal-userzone">{currentUser["tz"]}</code>
+        </div>
+
       </div>
       <hr />
 
@@ -106,20 +112,20 @@ function ActivitiesModal({
           : activities.length &&
             activitiesByDate.length &&
             activitiesByDate[0] !== "no activity exists for the date"
-          ? activitiesByDate.map((activity) => (
+          ? activitiesByDate.map((activity,index) => (
               <li
-                key={`currentUser${Math.random()}`}
+                key={currentUser.id + index}
                 className="modal-list-item"
               >
                 <ActivityDetails activity={activity} />
               </li>
             ))
-          : //can use uuid here
-          activitiesByDate[0] === "no activity exists for the date"
+          : 
+          (activitiesByDate[0] === "no activity exists for the date")
           ? activitiesByDate[0]
-          : activities.map((activity) => (
+          : activities.map((activity,index) => (
               <li
-                key={`currentUser${Math.random()}`}
+                key={currentUser.id+index}
                 className="modal-list-item"
               >
                 <ActivityDetails activity={activity} />
@@ -130,7 +136,7 @@ function ActivitiesModal({
       <FaWindowClose
         className="modal-close-btn"
         name="closeModal"
-        onClick={handleModalClose}
+        onClick={()=>setModalIsOpen(false)}
       ></FaWindowClose>
     </Modal>
   );
