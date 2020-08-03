@@ -77,7 +77,14 @@ function ActivitiesModal({
   const handleModalClose = () => {
     userActivityClosed();
   };
-  
+
+
+  const CustomInput = ({ value, onClick }) => (
+    <button className="modal-date-picker" onClick={onClick}>
+      {value}
+    </button>
+  );
+
   return (
     <Modal
       closeTimeoutMS={500}
@@ -93,18 +100,18 @@ function ActivitiesModal({
         <h2 className="modal-title">{currentUser["username"]}</h2>
 
         <DatePicker
-          className="modal-date-picker"
           selected={dateTime}
           onChange={onChangeDate}
+          customInput={<CustomInput />}
+          todayButton="Go To Today"
         ></DatePicker>
         
         <div className = "modal-userdetails">
-        <code className = "modal-userid">{currentUser["id"]}</code>
-        <code className = "modal-userzone">{currentUser["tz"]}</code>
+          <code className = "modal-userid">{currentUser["id"]}</code>
+          <code className = "modal-userzone">{currentUser["tz"]}</code>
         </div>
 
       </div>
-      <hr />
 
       <ul className="modal-list">
         {activities.length === 0

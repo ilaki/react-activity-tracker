@@ -5,6 +5,7 @@
     flex-direction: column;
     min-height: 100vh;
     max-width: 100vw;
+    padding: 20px;
     justify-content: center;
     align-items: center;
     background: var(--bg-gradient);
@@ -17,9 +18,9 @@
     text-transform: uppercase;
     font-family: 'Oswald';
     letter-spacing: 0.5rem;
-    position: sticky;
-    /* top: 40px; */
-    margin-bottom: 20px;
+    position: relative;
+    top: 40px;
+    margin-bottom: 40px;
     width: 60vw;
     text-align: center;
     border: 1.5px solid black;
@@ -29,6 +30,6 @@
 
 .users-list {
     width: 80vw;
-    margin: 50px; 
+    margin: 40px; 
     max-width: 800px;
 }
